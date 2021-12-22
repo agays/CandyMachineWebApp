@@ -10,7 +10,7 @@ import { LAMPORTS_PER_SOL } from "@solana/web3.js";
 
 import { useAnchorWallet } from "@solana/wallet-adapter-react";
 import { WalletDialogButton } from "@solana/wallet-adapter-material-ui";
-
+import mainnetLogo from "./media/Hornhub.png";
 import {
   CandyMachine,
   awaitTransactionSignatureConfirmation,
@@ -167,11 +167,12 @@ const Home = (props: HomeProps) => {
 
   return (
     <main>
+      <img className='Logo' src={mainnetLogo}></img>
       <div className='mint-container'>
       {wallet && (
         <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
       )}
-
+      
       {/* {wallet && <p>Balance: {(balance || 0).toLocaleString()} SOL</p>} */}
 
       {wallet && <p>Total Available: {itemsAvailable}</p>}
@@ -179,7 +180,7 @@ const Home = (props: HomeProps) => {
       {/* {wallet && <p>Redeemed: {itemsRedeemed}</p>} */}
 
       {wallet && <p>Remaining: {itemsRemaining}</p>}
-
+      
       <MintContainer>
         {!wallet ? (
           <ConnectButton>Connect Wallet</ConnectButton>

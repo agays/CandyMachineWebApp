@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #303030;
+  background-color: #0e0d0d;
   color: #fda500;
 }
 
@@ -25,4 +25,10 @@ code {
   padding-top: 3%;
   padding-bottom: 3%;
   font-size: 1.3em;
+}
+
+.Logo {
+  margin: auto;
+  width: 200px;
+  text-align: center;
 }
